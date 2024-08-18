@@ -7,8 +7,10 @@ Pablo Javier Batz Contreras - 20190298
 ## Descripcion de niveles 
 El primer nivel contará con equipo (VPC) para la administración, otro más para la gerencia 
 junto con su secretaria, 2 para la atención al cliente y 6 para uso de recursos humanos. 
+
 El segundo nivel contará con 12 equipos en total repartidos en las distintas oficinas que lo 
 componen (3 en la oficina A, 6 en la B y el resto en la C). 
+
 El tercer nivel contará con 5 equipos en total repetidos en las distintas oficinas que lo 
 componen (1 en la recepción, 3 en Ti y 1 en ventas)
 **Nivel 1:**
@@ -53,16 +55,16 @@ componen (1 en la recepción, 3 en Ti y 1 en ventas)
 
 ## Asignación de Dirección IP a la VPC
 
-### 1. Acceso a la Configuración de la VPC
+**1. Acceso a la Configuración de la VPC**
 - Haga clic en la VPC que desea configurar para abrir su menú de configuración.
 
-### 2. Navegación hasta la Configuración de IP
+**2. Navegación hasta la Configuración de IP**
 - En el menú de configuración de la VPC, busque y seleccione la pestaña "Desktop".
 
-### 3. Entrada a la Gestión de IP
+**3. Entrada a la Gestión de IP**
 - Dentro de la pestaña "Desktop", localice y seleccione "IP Configuration" para abrir la ventana de configuración de los parámetros de red de la VPC.
 
-### 4. Establecimiento de la Dirección IP
+**4. Establecimiento de la Dirección IP**
 - En el campo "IP Configuration", introduzca manualmente la dirección IP que desea asignar a la VPC, incluyendo la máscara de subred correspondiente.
 
 ## Pings entre los hosts
@@ -80,7 +82,7 @@ Comunicación entre las areas:
 
 
 
-# Demostración de un paquete ARP/ICMP
+## Demostración de un paquete ARP/ICMP
 
 ***Desde gerencia 104 al area de TI, (Vista de paquetes)***
 
