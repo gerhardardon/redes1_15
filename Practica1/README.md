@@ -53,19 +53,28 @@ componen (1 en la recepción, 3 en Ti y 1 en ventas)
 | 192.168.19.33| area de ti      |
 | 192.168.19.34| area de ventas  |
 
-## Asignación de Dirección IP a la VPC
+## Comfiguracion de las areas 
+- Administracion
+  ![](./assets/cAdministracion.PNG)
+- Atencion al cliente
+  ![](./assets/cAtencion.PNG)
+- Gerencia 
+  ![](./assets/cGerencia.PNG)
+- Recursos humanos
+  ![](./assets/cRH.PNG)
+- Oficina A
+  ![](./assets/cA.PNG)
+- Oficina B
+  ![](./assets/cB.PNG)
+- Oficina C
+  ![](./assets/cC.PNG)
+- Recepcion 
+  ![](./assets/cRecepcion.PNG)
+- Area de IT
+  ![](./assets/cTI.PNG)
+- Area de ventas
+  ![](./assets/cVentas.PNG)
 
-**1. Acceso a la Configuración de la VPC**
-- Haga clic en la VPC que desea configurar para abrir su menú de configuración.
-
-**2. Navegación hasta la Configuración de IP**
-- En el menú de configuración de la VPC, busque y seleccione la pestaña "Desktop".
-
-**3. Entrada a la Gestión de IP**
-- Dentro de la pestaña "Desktop", localice y seleccione "IP Configuration" para abrir la ventana de configuración de los parámetros de red de la VPC.
-
-**4. Establecimiento de la Dirección IP**
-- En el campo "IP Configuration", introduzca manualmente la dirección IP que desea asignar a la VPC, incluyendo la máscara de subred correspondiente.
 
 ## Pings entre los hosts
 Comunicación entre las areas:
@@ -84,8 +93,6 @@ Comunicación entre las areas:
 
 ## Demostración de un paquete ARP/ICMP
 
-***Desde gerencia 104 al area de TI, (Vista de paquetes)***
-
-![Diagrama de red](./assets/f1.png)
-![Diagrama de red](./assets/f2.png)
-![Diagrama de red](./assets/f3.png)
+Test desde 192.168.19.31 hasta 192.168.19.101
+  ![](./assets/1.PNG)
+  ![](./assets/2.PNG)
