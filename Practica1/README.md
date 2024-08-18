@@ -26,14 +26,30 @@ componen (1 en la recepción, 3 en Ti y 1 en ventas)
 | 192.168.19.110| recursos_N1       |
 | 192.168.19.111| recursos_N1       |
 
+**Nivel 2:**
+| IP            | Descripción      |
+|---------------|------------------|
+| 192.168.19.20| oficina A |
+| 192.168.19.21| oficina A |
+| 192.168.19.22| oficina A |
+| 192.168.19.23| oficina B |
+| 192.168.19.24| oficina B |
+| 192.168.19.25| oficina B |
+| 192.168.19.26|  oficina B|
+| 192.168.19.27|  oficina B|
+| 192.168.19.28|  oficina B|
+| 192.168.19.29|  oficina C|
+| 192.168.19.210| oficina C|
+| 192.168.19.211| oficina C|
+
 **Nivel 3:**
 | IP            | Descripción       |
 |---------------|-------------------|
-| 192.168.19.30| recepcion |
-| 192.168.19.31| area de ti 1      |
-| 192.168.19.32| area de ti 2      |
-| 192.168.19.33| area de ti 3      |
-| 192.168.19.34| area de ventas    |
+| 192.168.19.30| recepcion       |
+| 192.168.19.31| area de ti      |
+| 192.168.19.32| area de ti      |
+| 192.168.19.33| area de ti      |
+| 192.168.19.34| area de ventas  |
 
 ## Asignación de Dirección IP a la VPC
 
