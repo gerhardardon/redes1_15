@@ -53,7 +53,7 @@ componen (1 en la recepción, 3 en Ti y 1 en ventas)
 | 192.168.19.33| area de ti      |
 | 192.168.19.34| area de ventas  |
 
-## Comfiguracion de las areas 
+## Configuracion de las areas 
 - Administracion
   ![](./assets/cAdministracion.PNG)
 - Atencion al cliente
