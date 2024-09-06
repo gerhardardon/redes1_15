@@ -11,6 +11,8 @@ Pablo Javier Batz Contreras - 20190298
 - IT             49
 
 ## Area central 
+Topologia usada
+![](./assets/topologiaCental.PNG)
 Configuarcion de la VLAN desde el server sw1
 ![](./assets/vlanServer.PNG)
 ![](./assets/vlanServer2.PNG)
