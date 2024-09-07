@@ -32,6 +32,7 @@ vtp version 2
 vtp mode client
 
 int f0/1
+switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 19,29,39,49,1002-1005
 
@@ -45,23 +46,23 @@ switchport access vlan 40
 - Configuracion SW11, SW12, SW13.
 
 - Configuracion SW11 CLIENTE
-![Configuracion SW11 CLIENTE](SW11%20.jpg)
+![Configuracion SW11 CLIENTE](./assets/SW11%20.jpg)
 
 - Configuracion SW12 CLIENTE
-![Configuracion SW12 CLIENTE](sw12.jpg)
+![Configuracion SW12 CLIENTE](./assets/sw12.jpg)
 
 - Configuracion SW13 CLIENTE
 
-![Configuracion SW13 CLIENTE](sw13.jpg)
+![Configuracion SW13 CLIENTE](./assets/sw13.jpg)
 
 - Configuracion Access mode y trunk mode
   
-![Configuracion Access mode](accresmode.jpg)
+![Configuracion Access mode](./assets/accresmode.jpg)
 
 - Vlans finales 
   
-![Configuracion Access mode](VLANS.jpg)
+![Configuracion Access mode](./assets/VLANS.jpg)
 
 - Ping entre area Secretaria
 
-![Pings](pingSEC.jpg)
+![Pings](./assets/pingSEC.jpg)
