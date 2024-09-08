@@ -9,19 +9,24 @@ Pablo Javier Batz Contreras - 20190298
 - Secretaria     29
 - Contabilidad   39
 - IT             49
+![](./assets/vlanServer2.PNG)
 
-## Area central 
+## Resumen de IPs
+Para las IPs se utilizó el siguiente formato **192.169.VLAN.X** en donde:
+- VLAN es el numero de vlan al que pertenece la pc (19,29,39,49)
+- X es el numero del dispositivo (la cuenta inicia en area central con 1, area administratiba con 11, oficina A con 21)
+
+### Area central 
 Topologia usada
 ![](./assets/topologiaCental.PNG)
 Configuarcion de la VLAN desde el server sw1
 ![](./assets/vlanServer.PNG)
-![](./assets/vlanServer2.PNG)
 
-Configuracion de vtp Server desde sw1
+#### Conf de Server
 ![](./assets/vtpDomain.PNG)
 ![](./assets/vtpStatusServer.PNG)
 
-### Conf de clients
+#### Conf de clients
 Se utilizaron los siguientes comandos (f0/x cambia dependiendo del puerto, VLAN cambia dependiendo del dispositivo)
 ```
 enable
@@ -63,6 +68,13 @@ switchport access vlan 40
   
 ![Configuracion Access mode](./assets/VLANS.jpg)
 
-- Ping entre area Secretaria
+## Pings
 
+Ping entre Secretaria
 ![Pings](./assets/pingSEC.jpg)
+
+Ping entre IT
+![](./assets/Pings2.PNG)
+
+Ping entre RRHH y Contabilidad (no deberia de funcionar)
+![](./assets/pings3.PNG)
