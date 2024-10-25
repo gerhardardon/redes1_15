@@ -6,7 +6,7 @@
 - RPVST (router y sw)
 
 ## Configurar las VLANs en el switch SW5: 
-
+```
 Switch>enable
 Switch#configure terminal
 Switch(config)#vlan 18
@@ -15,8 +15,11 @@ Switch(config-vlan)#exit
 Switch(config)#vlan 38
 Switch(config-vlan)#name Ventas
 Switch(config-vlan)#exit
+```
 
 ## Asignar interfaces a las VLANs:
+
+```
 Switch(config)#interface fastEthernet 0/1
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 18
@@ -25,7 +28,7 @@ Switch(config)#interface fastEthernet 0/2
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 38
 Switch(config-if)#exit
-
+```
 
 
 # Quiche (largo)
@@ -50,7 +53,7 @@ Switch(config-if)#exit
 
 
 ## Configurar las VLANs en el switch SW6
-'''
+```
 Switch>enable
 Switch#configure terminal
 Switch(config)#vlan 18
@@ -62,11 +65,11 @@ Switch(config-vlan)#exit
 Switch(config)#vlan 28
 Switch(config-vlan)#name Contabilidad
 Switch(config-vlan)#exit
-'''
+```
 
 ## Asignar interfaces a las VLANs
 
-'''
+```
 Switch(config)#interface fastEthernet 0/1
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 38
@@ -75,5 +78,5 @@ Switch(config)#interface fastEthernet 0/2
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 18
 Switch(config-if)#exit
-'''
+```
 
