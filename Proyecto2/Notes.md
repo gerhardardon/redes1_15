@@ -44,6 +44,42 @@ Switch(config-if)#exit
 - VLAN
 - VTP (opcional de esw a sw)
 
+## Configurar las VLANs en el switch de Petén
+
+```
+Switch>enable
+Switch#configure terminal
+Switch(config)#vlan 38
+Switch(config-vlan)#name Ventas
+Switch(config-vlan)#exit
+Switch(config)#vlan 48
+Switch(config-vlan)#name RRHH
+Switch(config-vlan)#exit
+Switch(config)#vlan 18
+Switch(config-vlan)#name Contabilidad
+Switch(config-vlan)#exit
+
+```
+
+## Asignar interfaces a las VLANs:
+```
+Switch(config)#interface fastEthernet 0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 38
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 48
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 18
+Switch(config-if)#exit
+
+```
+
 # Izabal (corto)
 192.167.15.0/24
 - subnetting
