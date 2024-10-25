@@ -1,12 +1,5 @@
 # Sede Jutiapa
-ID 192.168.15.0/25 -> 255.255.255.0
-
-Equipos, vlans e ip's:
-RRHH            vlan18      192.168.15.00/27    255.255.255.224   32 ips
-Contabilidad    vlan28      192.168.15.32/28    255.255.255.240   16 ips
-ventas          vlan38      192.168.15.48/28    255.255.255.240   16 ips
-Informatica     vlan48      192.168.15.48/29    255.255.255.248   08 ips
-
+![](./assets/Jutiapa.PNG)
 ## 1. Config de VTP
 **VTP Server (ESW1)**
 ```
@@ -111,3 +104,181 @@ channel-group 2 mode passive
 no shutdown
 ```
 `show etherchannel summary `
+## 5. Puertas virtuales 
+```
+interface vlan 18
+ip address 192.167.15.1 255.255.255.192  # /26 para VLAN 18
+no shutdown
+exit
+
+interface vlan 28
+ip address 192.167.15.65 255.255.255.224  # /27 para VLAN 28
+no shutdown
+exit
+
+interface vlan 38
+ip address 192.167.15.97 255.255.255.240  # /28 para VLAN 38
+no shutdown
+exit
+```
+`show ip interface brief`
+
+# Sede Escuintla
+![](./assets/Escuintla.PNG)
+## 1. Config de VTP
+**VTP Server (ESW1)**
+```
+enable 
+conf t
+hostname ESW1
+no ip domain-lookup
+do wr 
+
+vtp domain redes1
+vtp password redes1
+vtp version 2
+vtp mode server
+exit
+```
+**VTP Client (SW2, SW3)**
+```
+enable 
+conf t
+hostname SW2
+no ip domain-lookup
+do wr 
+
+vtp domain redes1
+vtp password redes1
+vtp version 2 
+vtp mode client
+exit
+```
+## 2. Config de RPVST
+**RPVST (ESW1, SW2, SW3)**
+```
+conf t
+spanning-tree mode rapid-pvst
+exit
+
+do sh run
+```
+## 3. Configurar VLANs 
+**Crear VLANs (ESW1)**
+```
+enable
+conf t
+
+vlan 18
+name Ventas
+vlan 28
+name Informatica
+vlan 38
+name RRHH
+vlan 48
+name Contabilidad
+```
+
+# Sede Quiché
+![](./assets/Quiche.PNG)
+
+# Sede Petén
+![](./assets/Peten.PNG)
+## 1. Config de VTP
+**VTP Server (ESW1)**
+```
+enable 
+conf t
+hostname ESW1
+no ip domain-lookup
+do wr 
+
+vtp domain redes1
+vtp password redes1
+vtp version 2
+vtp mode server
+exit
+```
+**VTP Client (SW2, SW3)**
+```
+enable 
+conf t
+hostname SW2
+no ip domain-lookup
+do wr 
+
+vtp domain redes1
+vtp password redes1
+vtp version 2 
+vtp mode client
+exit
+```
+
+## 3. Configurar VLANs 
+**Crear VLANs (ESW1)**
+```
+enable
+conf t
+
+vlan 18
+name Ventas
+vlan 28
+name Informatica
+vlan 38
+name RRHH
+vlan 48
+name Contabilidad
+```
+## 4. Puertas virtuales 
+```
+interface vlan 18
+ip address 192.167.15.1 255.255.255.192  # /26 para VLAN 18
+no shutdown
+exit
+
+interface vlan 28
+ip address 192.167.15.65 255.255.255.224  # /27 para VLAN 28
+no shutdown
+exit
+
+interface vlan 38
+ip address 192.167.15.97 255.255.255.240  # /28 para VLAN 38
+no shutdown
+exit
+```
+`show ip interface brief`
+# Sede Izabal
+![](./assets/Izabal.PNG)
+
+## 1. Configurar VLANs 
+**Crear VLANs (ESW1)**
+```
+enable
+conf t
+
+vlan 18
+name Ventas
+vlan 28
+name Informatica
+vlan 38
+name RRHH
+vlan 48
+name Contabilidad
+```
+## 2. Puertas virtuales 
+```
+interface vlan 18
+ip address 192.167.15.1 255.255.255.192  # /26 para VLAN 18
+no shutdown
+exit
+
+interface vlan 28
+ip address 192.167.15.65 255.255.255.224  # /27 para VLAN 28
+no shutdown
+exit
+
+interface vlan 38
+ip address 192.167.15.97 255.255.255.240  # /28 para VLAN 38
+no shutdown
+exit
+```
